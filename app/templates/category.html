@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h3>Список категорий</h3>
+    <table class="table table-hover table-dark">
+    <thead>
+    <tr>
+      <th scope="col">id</th>
+      <th scope="col">Name</th>
+      <th scope="col">Code</th>
+    </tr>
+    </thead>
+    <tbody>
+    {% for category in categories %}
+    <tr>
+      <th scope="row">{{ category.id }}</th>
+      <td>{{ category.name }}</td>
+      <td>{{ category.code }}</td>
+    </tr>
+    {% endfor %}
+    </tbody>
+    </table>
+{% endblock content %}

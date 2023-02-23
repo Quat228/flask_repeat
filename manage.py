@@ -9,3 +9,5 @@ if __name__ == "__main__":
 # git init
 # git status
 # git add manage.py
+# git commit -m "added manage.py"
+# git restore manage.py

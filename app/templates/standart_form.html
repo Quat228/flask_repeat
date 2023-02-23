@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block content %}
+<form method="post">
+  {{ form.csrf_token }}
+  {% for field in form %}
+      <div class="form-group">
+        {% if field.widget.input_type != "hidden" %}
+            {{ field.label }}
+            {{ field(class="form-control") }}
+        {% endif %}
+      </div>
+  {% endfor %}
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+{% endblock content %}
